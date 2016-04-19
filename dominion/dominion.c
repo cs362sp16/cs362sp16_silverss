@@ -688,29 +688,9 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return 0;
 			
     case council_room:
-      //+4 Cards
-      for (i = 0; i < 4; i++)
-	{
-	  drawCard(currentPlayer, state);
-	}
-			
-      //+1 Buy
-      state->numBuys++;
-			
-      //Each other player draws a card
-      for (i = 0; i < state->numPlayers; i++)
-	{
-	  if ( i != currentPlayer )
-	    {
-	      drawCard(i, state);
-	    }
-	}
-			
-      //put played card in played card pile
-      discardCard(handPos, currentPlayer, state, 0);
-			
-      return 0;
-			
+    return council_roomCard(state, currentPlayer, handPos);
+
+
     case feast:
       //gain card with cost up to 5
       //Backup hand
@@ -765,7 +745,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return 0;
 			
     case gardens:
-      return -1;
+      return GardensCard();
 			
     case mine:
       j = state->hand[currentPlayer][choice1];  //store card we will trash
@@ -832,15 +812,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 	return SmithyCard(state, currentPlayer, handPos);
 		
     case village:
-      //+1 Card
-      drawCard(currentPlayer, state);
-			
-      //+2 Actions
-      state->numActions = state->numActions + 2;
-			
-      //discard played card from hand
-      discardCard(handPos, currentPlayer, state, 0);
-      return 0;
+	return VillageCard(state, currentPlayer, handPos);
 		
     case baron:
       state->numBuys++;//Increase buys by 1!
@@ -894,16 +866,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return 0;
 		
     case great_hall:
-      //+1 Card
-      drawCard(currentPlayer, state);
-			
-      //+1 Actions
-      state->numActions++;
-			
-      //discard card from hand
-      discardCard(handPos, currentPlayer, state, 0);
-      return 0;
-		
+	return great_hallCard(state, currentPlayer);
     case minion:
       //+1 action
       state->numActions++;
@@ -1333,5 +1296,57 @@ int SmithyCard(struct gameState *state, int currentPlayer, int handPos){
       return 0;
 
 }
+
+int VillageCard(struct gameState *state, int currentPlayer, int handPos){
+      //+1 Card
+      drawCard(currentPlayer, state);
+			
+      //+2 Actions
+      state->numActions = state->numActions + 2;
+			
+      //discard played card from hand
+      discardCard(handPos, currentPlayer, state, 0);
+      return 0;
+
+}
+int GardensCard(){
+	return -1;
+}
+
+int council_roomCard(struct gameState *state, int currentPlayer, int handPos){
+	      //+4 Cards
+      for (int i = 0; i < 4; i++)
+	{
+	  drawCard(currentPlayer, state);
+	}
+			
+      //+1 Buy
+      state->numBuys++;
+			
+      //Each other player draws a card
+      for (int i = 0; i < state->numPlayers; i++)
+	{
+	  if ( i != currentPlayer )
+	    {
+	      drawCard(i, state);
+	    }
+	}
+			
+      //put played card in played card pile
+      discardCard(handPos, currentPlayer, state, 0);
+			
+      return 0;
+}
+
+int great_hallCard(struct gameState *state, int currentPlayer){
+	      //+1 Card
+      drawCard(currentPlayer, state);
+			
+      //+1 Actions
+      state->numActions++;
+			
+      return 0;
+}
+
 //end of dominion.c
 

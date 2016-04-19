@@ -131,5 +131,8 @@ int getWinners(int players[MAX_PLAYERS], struct gameState *state);
 
 //header functions added by assignment 1
 int SmithyCard(struct gameState *state, int currentPlayer, int handPos);
-
+int VillageCard(struct gameState *state, int currentPlayer, int handPos);
+int GardensCard();
+int council_roomCard(struct gameState *state, int currentPlayer, int handPos);
+int great_hallCard(struct gameState *state, int currentPlayer);
 #endif

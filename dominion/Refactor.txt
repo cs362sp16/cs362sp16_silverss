@@ -1,0 +1,8 @@
+set c99 mode in makefile
+list of cards that have been refactored:
+Card 1: smithy
+card 2: Village
+card 3: Gardens
+card 4: Council_Room
+card 5: Great_hall
+Refactoring this code was not very difficult, it mostly consisted of moving the code from the switch statements into new functions, and then adding headers to the dominion.h file.
