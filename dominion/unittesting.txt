@@ -1,0 +1,24 @@
+functions tested:
+unittest1: whoseTurn
+unittest2: buyCard
+unittest3: kingdomCards
+unittest4: supplyCount
+
+all four functions passed unit testing
+
+cards tested:
+cardtest1: smithy
+smithy is correctly implemented
+
+cardtest2: salvager
+in cardtest2 I found that the salvager card does not add coin equal to trashed card's cost, I suspect the very loose usage of the coin variable to be the culprit.
+
+cardtest3: sea_hag
+two bugs found, sea hag is not being discarded, and curses are not being added to the tops of opponent's decks
+
+cardtest4: village
+village is correctly implemented
+
+for coverage, every test hovered around 73% coverage on the tests themselves, but only about 34ls percent for dominion.c. This is pretty expected for doing 8 unit tests, the focus was to test particular small chunks of dominion.c, not the entire system overall.
+
+writing unit tests proved to be a bit more difficult than I thought it would be, testers really need to be well versed in the matter that they are testing to truly ensure that their tests catch any potiental problems. For example, with my sea-hag test, I had almost completely forgotten to check if the card was discarded until I had done a bit of digging about dominion online and remembered that this was a card game that I was writing tests for, and in most games cards get discarded when played. 
