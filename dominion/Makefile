@@ -52,6 +52,9 @@ unittestresults.out: unittest1 unittest2 unittest3 unittest4 cardtest4 cardtest3
 	./cardtest3 >> unittestresults.out
 	./cardtest4 >> unittestresults.out
 	gcov dominion.c >> unittestresults.out
+	echo "AFTER ONE GAME PLAYED" >> unittestresults.out
+	./playdom 3
+	gcov dominion.c >> unittestresults.out
 	cat dominion.c.gcov >> unittestresults.out
 
 
