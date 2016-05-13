@@ -1,0 +1,8 @@
+the two cards I tested other than the adventurer card were the smithy card and the village card. 
+I acheived 100% coverage and 100% branch coverage on all three cards, adventurer was a bit more difficult to tell but I believe it shows everything as being covered.
+My tests did not have to run very long to get this coverage, my tests were finishing almost instantly with 50 tests, so I kicked it up to 500 and it took like half a second to finish.
+I got more coverage with the random tests than the unit tests, and it felt easier to do so. Unit tests are good at testing specific instances, but the random test pulls ahead by being able to test a broad spectrum of values. 
+As far as better fault detection, I think it really depends on the type of fault.
+If it is an edge case then you should be writing to cover it in unit testing but random testing might not neccessarily get it.
+On the other hand if it just some weird anomaly of a case that exposes the fault that you could never have guessed would be an issue, random testing would be better at detecting it. Both have strengths and weaknesses.
+As far as checking correctness I would mostly use if statements checking that the card did what it was supposed to. I was orginally getting errors with the adventurer card not drawing two treasures everytime, but further investigation showed that it was due to there not being two treasures for the player to draw in their deck/discard.
