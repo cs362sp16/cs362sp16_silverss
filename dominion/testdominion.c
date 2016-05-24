@@ -82,6 +82,8 @@ int main(int argc, char *argv[]){
 		k[i] = allKingCards[i];
 	}
 
+	kingdomCards(k[0], k[1], k[2], k[3], k[4], k[5], k[6], k[7], k[8], k[9]);
+
 	//get random number of players between 2 and MAX_PLAYERS
 	int players = (rand() % MAX_PLAYERS);
 	if(players < 2){
