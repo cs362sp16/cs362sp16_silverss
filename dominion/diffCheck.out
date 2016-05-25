@@ -1,0 +1,182 @@
+7c7
+< player: 0 begins their turn
+---
+> player: 2 begins their turn
+9,12c9
+< player: 0 ends their turn
+< player: 1 begins their turn
+< no action cards in hand
+< player: 1 ends their turn
+---
+> player: 2 ends their turn
+19c16
+< player: 0 begins their turn
+---
+> player: 2 begins their turn
+21,23c18
+< player: 0 ends their turn
+< player: 1 begins their turn
+< player: 1 ends their turn
+---
+> player: 2 ends their turn
+29,33c24
+< player: 0 begins their turn
+< player: 0 ends their turn
+< player: 1 begins their turn
+< player: 1 ends their turn
+< player: 0 begins their turn
+---
+> player: 2 begins their turn
+35,45c26
+< player: 0 ends their turn
+< player: 1 begins their turn
+< player: 1 ends their turn
+< player: 0 begins their turn
+< player: 0 ends their turn
+< player: 1 begins their turn
+< player: 1 ends their turn
+< player: 0 begins their turn
+< player: 0 ends their turn
+< player: 1 begins their turn
+< player: 1 ends their turn
+---
+> player: 2 ends their turn
+51,53c32
+< player: 0 begins their turn
+< player: 0 ends their turn
+< player: 1 begins their turn
+---
+> player: 2 begins their turn
+55,63c34
+< player: 1 ends their turn
+< player: 0 begins their turn
+< player: 0 ends their turn
+< player: 1 begins their turn
+< player: 1 ends their turn
+< player: 0 begins their turn
+< player: 0 ends their turn
+< player: 1 begins their turn
+< player: 1 ends their turn
+---
+> player: 2 ends their turn
+67a39,41
+> player: 2 begins their turn
+> no action cards in hand
+> player: 2 ends their turn
+68a43
+> no action cards in hand
+71a47,48
+> player: 2 begins their turn
+> player: 2 ends their turn
+72a50
+> no action cards in hand
+75a54,55
+> player: 2 begins their turn
+> player: 2 ends their turn
+76a57
+> no action cards in hand
+79a61,63
+> player: 2 begins their turn
+> no action cards in hand
+> player: 2 ends their turn
+83a68,69
+> player: 2 begins their turn
+> player: 2 ends their turn
+84a71
+> no action cards in hand
+87a75,76
+> player: 2 begins their turn
+> player: 2 ends their turn
+90a80
+> no action cards in hand
+91a82,84
+> player: 2 begins their turn
+> no action cards in hand
+> player: 2 ends their turn
+92a86
+> no action cards in hand
+95a90,91
+> player: 2 begins their turn
+> player: 2 ends their turn
+96a93
+> no action cards in hand
+99a97,98
+> player: 2 begins their turn
+> player: 2 ends their turn
+101,102d99
+< player: 0 ends their turn
+< player: 1 begins their turn
+104,105d100
+< player: 1 ends their turn
+< player: 0 begins their turn
+109a105,106
+> player: 2 begins their turn
+> player: 2 ends their turn
+110a108
+> no action cards in hand
+113a112,114
+> player: 2 begins their turn
+> no action cards in hand
+> player: 2 ends their turn
+114a116
+> no action cards in hand
+117a120,121
+> player: 2 begins their turn
+> player: 2 ends their turn
+121a126,127
+> player: 2 begins their turn
+> player: 2 ends their turn
+127,135c133
+< player: 0 begins their turn
+< player: 0 ends their turn
+< player: 1 begins their turn
+< player: 1 ends their turn
+< player: 0 begins their turn
+< player: 0 ends their turn
+< player: 1 begins their turn
+< player: 1 ends their turn
+< player: 0 begins their turn
+---
+> player: 2 begins their turn
+137,143c135
+< player: 0 ends their turn
+< player: 1 begins their turn
+< player: 1 ends their turn
+< player: 0 begins their turn
+< player: 0 ends their turn
+< player: 1 begins their turn
+< player: 1 ends their turn
+---
+> player: 2 ends their turn
+147a140,141
+> player: 2 begins their turn
+> player: 2 ends their turn
+148a143
+> no action cards in hand
+151a147,148
+> player: 2 begins their turn
+> player: 2 ends their turn
+152a150
+> no action cards in hand
+155a154,156
+> player: 2 begins their turn
+> no action cards in hand
+> player: 2 ends their turn
+159a161,162
+> player: 2 begins their turn
+> player: 2 ends their turn
+160a164
+> no action cards in hand
+163a168,169
+> player: 2 begins their turn
+> player: 2 ends their turn
+166,167d171
+< player: 1 begins their turn
+< player: 1 ends their turn
+170,171c174,176
+< Player: 0 Score: 14
+< Player: 1 Score: 8
+---
+> Player: 0 Score: 7
+> Player: 1 Score: 1
+> Player: 2 Score: 6

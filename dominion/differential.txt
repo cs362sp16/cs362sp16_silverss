@@ -1,0 +1,6 @@
+I found many differences right away when comparing dominion files with a classmate.
+I compared mine to Paul Lantow's, and I cannot say who has the more correct code from this test due to the random nature of my testdominion.c code. In order for differential testing to be helpful, there really can't be any randomness in the test, because random choices almost guarantee that the code will turn out different.
+
+When I run testdominion on both my and Paul's code, I get from around 60-66% coverage off of a single run with seed 42. After running about 5 different seeds I will typically see around 85% total coverage of dominion.c, so I believe it is safe to say I can get at least 60% coverage after 20 runs.
+
+I compared our code using the diff tool in a bash script, the result of this run can befound in diffcheck.out

@@ -1,0 +1,34 @@
+#!/bin/bash
+
+otherDirectory="classmatedom"
+
+make clean
+make all
+make testdominion
+
+./testdominion 42 > compare1
+
+cd $otherDirectory
+
+make clean
+make all
+make testdominion
+
+./testdominion 42 > compare2
+
+cd ..
+
+
+diff compare1 $otherDirectory/compare2 > diffCheck.out
+
+if [[ -e diffCheck.out ]]; then
+	echo "Failed Differential test"
+else
+	echo "passed differential test"
+fi ;
+
+echo "coverage for my dominion.c:"
+gcov -b dominion.c
+cd $otherDirectory
+echo "coverage for classmate dominion.c:"
+gcov -b dominion.c
