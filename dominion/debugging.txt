@@ -1,0 +1,8 @@
+when preforming unit testing on the sea_hag card, I discovered that the card is not discarded from the hand when played. I stepped through the unit test (cardtest3.c) using GDB, and then stepped into the playcard function. After stepping through the playcard function line by line, I found that the sea_hag case never makes a call to the discardCard function before returning.
+
+Agans' principles:
+Understand the system: I had to understand the game dominion in order to know that a card should be discarded whenever it gets played, if I didn't I would have never caught the bug.
+
+Quit thinking and look: my test kept notifying me that the card was not discarded no matter what seed was entered, so I finally went to check the dominion.c code to find that there was no call to discardCard.
+
+If you didn't fix it, it ain't fixed: fixing this bug was as simple as making a call to discardCard targeting the sea_hag card that was played. 

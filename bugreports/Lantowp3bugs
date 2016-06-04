@@ -1,0 +1,5 @@
+using a unit test on the salvager card, I discovered that when played it does not add coins to the player equal to the trashed card's value. I suspect that is a result of the very loose way that the coins variable is used.
+
+Using a unit test on the sea_hag card revealed that when the card is played two errors happen: the sea_hag card is not discarded, and a curse is not added to the opponent's deck. I couldn't find the source of the curse bug, but the discard is pretty clear, there is just no call to the discardCard function in the sea_hag code.
+
+using a modified version of the random system test for assignment 3, I found that there is a bug in the remodel_card function. Given the proper conditions, when the remodel card is played it can cause a core dump, crashing the entire game. Upon further inspection, it appears to be caused by the function forcing choice1 = 1 and choice2 = 2, which could potientially be invalid choices and lead to the core dump.

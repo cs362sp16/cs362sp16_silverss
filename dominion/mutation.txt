@@ -1,0 +1,7 @@
+I used the C mutation tool Milu to create mutations of dominion.c which I then ran against testdominion from assignment 4 to attempt to kill the mutants
+
+Milu is available at: http://github.com/yuejia/Milu
+
+I generated 14 mutants of dominion.c, all 14 of which were killed by test dominion. Some of the tests were thrown into infinite loops which I considered a failing test case, because it was functions in dominion.c looping, not my test. These loops were caused by mutations in key functions, like preventing endTurn from properly ending a turn.
+
+The mutants created and tested against will be found in the file called "mutants"
