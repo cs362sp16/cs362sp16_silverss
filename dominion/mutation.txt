@@ -5,3 +5,5 @@ Milu is available at: http://github.com/yuejia/Milu
 I generated 14 mutants of dominion.c, all 14 of which were killed by test dominion. Some of the tests were thrown into infinite loops which I considered a failing test case, because it was functions in dominion.c looping, not my test. These loops were caused by mutations in key functions, like preventing endTurn from properly ending a turn.
 
 The mutants created and tested against will be found in the file called "mutants"
+
+In the end, I don't think mutation testing was a good indicator of how strong my test was for this situation. Too many of the mutants made changes that instead of just making little bugs here and there, caused majot corruption in the way the program ran and often caused it to crash on its own.
